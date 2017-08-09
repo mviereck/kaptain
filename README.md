@@ -1,5 +1,5 @@
 # kaptain
-GUI frontend for shell commands based on QT4
+GUI frontend for shell commands
 
 A fork from http://kaptain.sourceforge.net/. Honours go to author Zsolt Térek.
 > Introduction
