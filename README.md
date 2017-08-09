@@ -17,9 +17,10 @@ Unfortunately, kaptain is no longer maintained, and as it is based on QT4 and no
 Is anyone out there who would like to port kaptain to QT5? :-)
 
 # Debian
-kaptain is available in repositories for debian jessie: https://packages.debian.org/jessie/kaptain
+kaptain is available in repositories for debian jessie: https://packages.debian.org/jessie/kaptain.
 The provided package works on debian stretch, too.
-If you want to compile yourself:
+
+To compile yourself:
 ```
 apt-get install libqt4-dev bison flex
 export QT_SELECT=qt4
@@ -28,8 +29,17 @@ make
 make install
 ```
 # Ubuntu
-kaptain is available in repositories of Ubuntu 14.04: http://packages.ubuntu.com/trusty/kaptain
+kaptain is available in repositories of Ubuntu 14.04: http://packages.ubuntu.com/trusty/kaptain.
 The provided package works on Ubuntu 16.04, too.
+
+To compile yourself:
+```
+apt-get install libqt4-dev g++ bison flex
+export QT_SELECT=qt4
+qmake kaptain.pro
+make
+make install
+```
 
 # Fedora
 To compile yourself:
