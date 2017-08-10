@@ -16,18 +16,19 @@ Unfortunately, kaptain is no longer maintained, and as it is based on QT4 and no
 
 Is anyone out there who would like to port kaptain to QT5? :-)
 # Packages
+Currently, this repository provides 64-bit packages only.
 ## debian
 kaptain is available in repositories for debian jessie: https://packages.debian.org/jessie/kaptain.
-The provided package works on debian stretch, too. The package provided above is a copy from debian repository.
+The provided package works on debian stretch, too. The package provided above is a copy from debian repository. [Package kaptain for debian](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-2_amd64_debian.deb)
 ## Ubuntu
 kaptain is available in repositories of Ubuntu 14.04: http://packages.ubuntu.com/trusty/kaptain.
-The provided package works on Ubuntu 16.04, too. The package above is a copy from Ubuntu repository.
+The provided package works on Ubuntu 16.04, too. The package above is a copy from Ubuntu repository. [Package kaptain for Ubuntu](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-1_amd64_ubuntu.deb)
 ## fedora
-This repository provides an rpm package for fedora, see above. Compiled and packaged on fedora 25.
+This repository provides an rpm package for fedora, see above. Compiled and packaged on fedora 25. [Package kaptain for fedora](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_fedora.rpm)
 ## openSUSE
-This repository provides an rpm package for openSUSE, see above. Compiled and packaged on openSUSE 42 LEAP.
+This repository provides an rpm package for openSUSE, see above. Compiled and packaged on openSUSE 42 LEAP. [Package kaptain for openSUSE](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_opensuse.rpm)
 
-# Compiling
+# Compiling instructions
 The makefile of kaptain installs everything in `/usr/local`. If you compile yourself, kaptain is installed in `/usr/local/bin/kaptain`. Manpage and documentation are in `/usr/local`, too. `man kaptain` ma not work then. Using the provided packages, all related files are stored at the system location they really belong to.
 
 ## debian
