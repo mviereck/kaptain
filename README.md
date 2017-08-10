@@ -52,7 +52,7 @@ make install
 # openSUSE
 To compile yourself:
 ```
-sudo zypper install libqt4-devel bison flex
+zypper install libqt4-devel bison flex
 qmake kaptain.pro
 make
 make install
