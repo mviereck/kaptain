@@ -50,6 +50,8 @@ make
 make install
 ```
 # openSUSE
+This repository provides an rpm package, see above. Compiled and packaged on openSUSE 42 LEAP.
+
 To compile yourself:
 ```
 zypper install libqt4-devel bison flex
