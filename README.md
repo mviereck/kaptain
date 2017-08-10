@@ -15,12 +15,22 @@ This little repo stores a copy of the source code and provides instructions for 
 Unfortunately, kaptain is no longer maintained, and as it is based on QT4 and not ported to QT5, it already disappears from official repositories. It is a quite useful tool and I am not aware of another one that is able to provide its features. Personally, I am using it as a frontend for [x11docker](https://github.com/mviereck/x11docker).
 
 Is anyone out there who would like to port kaptain to QT5? :-)
-
-# Debian
+# Packages
+## debian
 kaptain is available in repositories for debian jessie: https://packages.debian.org/jessie/kaptain.
-The provided package works on debian stretch, too.
+The provided package works on debian stretch, too. The package provided above is a copy from debian repository.
+## Ubuntu
+kaptain is available in repositories of Ubuntu 14.04: http://packages.ubuntu.com/trusty/kaptain.
+The provided package works on Ubuntu 16.04, too. The package above is a copy from Ubuntu repository.
+## fedora
+This repository provides an rpm package for fedora, see above. Compiled and packaged on fedora 25.
+## openSUSE
+This repository provides an rpm package for openSUSE, see above. Compiled and packaged on openSUSE 42 LEAP.
 
-To compile yourself:
+# Compiling
+The makefile of kaptain installs everything in `/usr/local`. If you compile yourself, kaptain is installed in `/usr/local/bin/kaptain`. Manpage and documentation are in `/usr/local`, too. `man kaptain` ma not work then. Using the provided packages, all related files are stored at the system location they really belong to.
+
+## debian
 ```
 apt-get install libqt4-dev bison flex
 export QT_SELECT=qt4
@@ -28,11 +38,7 @@ qmake kaptain.pro
 make
 make install
 ```
-# Ubuntu
-kaptain is available in repositories of Ubuntu 14.04: http://packages.ubuntu.com/trusty/kaptain.
-The provided package works on Ubuntu 16.04, too.
-
-To compile yourself:
+## Ubuntu
 ```
 apt-get install libqt4-dev g++ bison flex
 export QT_SELECT=qt4
@@ -41,18 +47,14 @@ make
 make install
 ```
 
-# Fedora
-To compile yourself:
+## fedora
 ```
 dnf install qt-devel bison flex
 qmake-qt4 kaptain.pro
 make
 make install
 ```
-# openSUSE
-This repository provides an rpm package, see above. Compiled and packaged on openSUSE 42 LEAP.
-
-To compile yourself:
+## openSUSE
 ```
 zypper install libqt4-devel bison flex
 export QT_SELECT=qt4
