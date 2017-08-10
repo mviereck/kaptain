@@ -53,6 +53,7 @@ make install
 To compile yourself:
 ```
 zypper install libqt4-devel bison flex
+export QT_SELECT=qt4
 qmake kaptain.pro
 make
 make install
