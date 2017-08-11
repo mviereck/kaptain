@@ -27,8 +27,8 @@ The provided package works on Ubuntu 16.04, too. The package above is a copy fro
 Most likely, the Ubuntu package of kaptain will work on other Ubuntu-based distributions, too.
 ## fedora
 This repository provides an rpm package for fedora, see above. Compiled and packaged on fedora 25. [Download: package kaptain for fedora](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_fedora.rpm).
-#### CentOS, Redhat
-As directly related, the rpm package provided for fedora will most probably work on CentOS and Redhat, too. Though, this is not tested yet.
+#### CentOS, RHEL
+As directly related, the rpm package provided for fedora will most probably work on CentOS and RHEL, too. Though, this is not tested yet.
 ## openSUSE
 This repository provides an rpm package for openSUSE, see above. Compiled and packaged on openSUSE 42 LEAP. [Download: package kaptain for openSUSE](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_opensuse.rpm).
 
