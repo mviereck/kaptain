@@ -17,22 +17,22 @@ This little repo:
 Currently, this repository provides 64-bit packages only.
 ## debian
 kaptain is available in repositories for debian jessie: https://packages.debian.org/jessie/kaptain.
-The provided package works on debian stretch, too. The package provided above is a copy from debian repository. [Download: package kaptain for debian](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-2_amd64_debian.deb).
+The provided package works on debian stretch, too. The package provided here is a copy from debian repository. [Download package kaptain for debian](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-2_amd64_debian.deb).
 ## Ubuntu, Mint and other forks of Ubuntu
 kaptain is available in repositories of Ubuntu 14.04: http://packages.ubuntu.com/trusty/kaptain.
-The provided package works on Ubuntu 16.04, too. The package above is a copy from Ubuntu repository. [Download: package kaptain for Ubuntu](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-1_amd64_ubuntu.deb).
+The provided package works on Ubuntu 16.04, too. The package provided here is a copy from Ubuntu repository. [Download package kaptain for Ubuntu](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-1_amd64_ubuntu.deb).
 
 Most likely, the Ubuntu package of kaptain will work on other Ubuntu-based distributions like Linux Mint, too.
 ## fedora, CentOS, RHEL
-This repository provides an rpm package for fedora, see above. Compiled and packaged on fedora 25. [Download: package kaptain for fedora](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_fedora.rpm).
+This repository provides an rpm package for fedora. Compiled and packaged on fedora 25. [Download package kaptain for fedora](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_fedora.rpm).
 
 As directly related, the rpm package provided for fedora will most probably work on CentOS and RHEL, too. Though, this is not tested yet.
 ## openSUSE
-This repository provides an rpm package for openSUSE, see above. Compiled and packaged on openSUSE 42.3 LEAP. [Download: package kaptain for openSUSE](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_opensuse.rpm).
+This repository provides an rpm package for openSUSE. Compiled and packaged on openSUSE 42.3 LEAP. [Download package kaptain for openSUSE](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_opensuse.rpm).
 
 
 # Compiling from source
-The makefile of kaptain installs everything in `/usr/local`. If you compile yourself, kaptain is installed as `/usr/local/bin/kaptain`. Manpage and documentation are in `/usr/local`, too. `man kaptain` may not work then. Using the provided packages, all related files are stored at the system location they really belong to. [Download: source code of kaptain](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz).
+The makefile of kaptain is configured to install everything in `/usr/local`. If you compile yourself, kaptain is installed as `/usr/local/bin/kaptain`. Manpage and documentation are in subfolders of `/usr/local`, too. `man kaptain` may not work then. Using the provided packages, all related files are stored at system locations they belong to. [Download: source code of kaptain](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz).
 
 ## debian
 ```
