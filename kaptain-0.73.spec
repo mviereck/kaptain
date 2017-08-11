@@ -22,10 +22,10 @@ Source:         https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz
 URL:            https://github.com/mviereck/kaptain
 License:        GPLv2
 Group:          Development/Tools/GUI Builders
-%if 0%{fedora}
+%if 0%{?fedora} || 0%{?rhel_version} || 0%{?centos_version} 
 BuildRequires:  qt-devel     bison flex
-%else
-#openSUSE
+%endif
+%if 0%{?suse_version}
 BuildRequires:  libqt4-devel bison flex  
 %endif
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -46,8 +46,7 @@ a friendly dialog to the user to set up the command line.
 export INSTALL_ROOT=%{buildroot}
 export QT_SELECT=qt4
 
-%if 0%{fedora}
-#fedora
+%if 0%{?fedora} || 0%{?rhel_version} || 0%{?centos_version} 
 qmake-qt4 kaptain.pro
 %else
 #openSUSE
