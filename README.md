@@ -9,11 +9,11 @@ A fork from http://kaptain.sourceforge.net/. Honours go to author Zsolt Térek.
 
 [Dokumentation of kaptain](http://kaptain.sourceforge.net/docs/kaptain.html)
 
-This little repo stores a copy of the source code and provides instructions for compilation. Also, it provides some binary packages.
+This little repo:
+ - stores a copy of the source code
+ - provides some binary packages for installation
+ - provides instructions for compilation
 
-Unfortunately, kaptain is no longer maintained, and as it is based on QT4 and not ported to QT5, it already disappears from official repositories. It is a quite useful tool and I am not aware of another one that is able to provide its features. Personally, I am using it as a frontend for [x11docker](https://github.com/mviereck/x11docker).
-
-Is anyone out there who would like to port kaptain to QT5? :-)
 # Packages
 Currently, this repository provides 64-bit packages only.
 ## debian
@@ -67,3 +67,7 @@ qmake kaptain.pro
 make
 make install
 ```
+# Porting to QT5
+Unfortunately, kaptain is no longer maintained. As it is based on QT4 and not ported to QT5, it already disappears from official repositories. It is a quite useful tool and I am not aware of another one that is able to provide its features. Personally, I am using it as a frontend for [x11docker](https://github.com/mviereck/x11docker).
+
+Is anyone out there who would like to port kaptain to QT5? :-)
