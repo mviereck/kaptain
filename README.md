@@ -1,5 +1,4 @@
-# kaptain
-GUI frontend for shell commands
+# kaptain: GUI frontend for shell commands
 
 A fork from http://kaptain.sourceforge.net/. Honours go to author Zsolt Térek.
 
