@@ -30,7 +30,7 @@ This repository provides an rpm package for fedora, see above. Compiled and pack
 #### CentOS, RHEL
 As directly related, the rpm package provided for fedora will most probably work on CentOS and RHEL, too. Though, this is not tested yet.
 ## openSUSE
-This repository provides an rpm package for openSUSE, see above. Compiled and packaged on openSUSE 42 LEAP. [Download: package kaptain for openSUSE](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_opensuse.rpm).
+This repository provides an rpm package for openSUSE, see above. Compiled and packaged on openSUSE 42.3 LEAP. [Download: package kaptain for openSUSE](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_opensuse.rpm).
 
 
 # Compiling from source
