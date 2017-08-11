@@ -2,15 +2,14 @@
 GUI frontend for shell commands
 
 A fork from http://kaptain.sourceforge.net/. Honours go to author Zsolt Térek.
-> Introduction
->
->Kaptain is a universal graphical front-end for command line programs. It works on linux/UNIX platforms whereever Qt is available. Release 0.73 is using qmake and is compatible with Qt 4.
->
->Someone writes a simple script (so called grammar) which describes the possible arguments for a command line program and Kaptain brings up a friendly dialog to the user to set up the command line.
+
+Kaptain is a universal graphical front-end for command line programs. It works on linux/UNIX platforms whereever Qt is available. Release 0.73 is using qmake and is compatible with Qt 4.
+
+Someone writes a simple script (so called grammar) which describes the possible arguments for a command line program and Kaptain brings up a friendly dialog to the user to set up the command line.
 
 [Dokumentation of kaptain](http://kaptain.sourceforge.net/docs/kaptain.html)
 
-This little repo stores a copy of the source code and provides instructions for compilation. In the long term, it may provide some binary packages for multiple distributions.
+This little repo stores a copy of the source code and provides instructions for compilation. Also, it provides some binary packages.
 
 Unfortunately, kaptain is no longer maintained, and as it is based on QT4 and not ported to QT5, it already disappears from official repositories. It is a quite useful tool and I am not aware of another one that is able to provide its features. Personally, I am using it as a frontend for [x11docker](https://github.com/mviereck/x11docker).
 
