@@ -12,6 +12,7 @@ This little repo:
  - stores a copy of the source code
  - provides some binary packages for installation
  - provides instructions for compilation
+ - provides a dockerfile for kaptain in a docker image
 
 # Packages
 Currently, this repository provides 64-bit packages only.
@@ -30,6 +31,8 @@ As directly related, the rpm package provided for fedora will most probably work
 ## openSUSE
 This repository provides an rpm package for openSUSE. Compiled and packaged on openSUSE 42.3 LEAP. [Download package kaptain for openSUSE](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_opensuse.rpm).
 
+# Dockerfile and docker image
+The [Dockerfile for kaptain](https://github.com/mviereck/kaptain/raw/master/Dockerfile) provided here is used for an automated built of [x11docker/kaptain](https://hub.docker.com/r/x11docker/kaptain/) on dockerhub. Example use: `x11docker --stdout --silent --hostdisplay --gpu --sharedir YOURKAPTNFILE -- x11docker/kaptain YOURKAPTNFILE`
 
 # Compiling from source
 The makefile of kaptain is configured to install everything in `/usr/local`. If you compile yourself, kaptain is installed as `/usr/local/bin/kaptain`. Manpage and documentation are in subfolders of `/usr/local`, too. `man kaptain` may not work then. Using the provided packages, all related files are stored at system locations they belong to. [Download: source code of kaptain](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz).
