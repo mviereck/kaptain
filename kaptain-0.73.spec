@@ -17,7 +17,7 @@
 Summary:        GUI frontend for shell commands
 Name:           kaptain
 Version:        0.73
-Release:        1
+Release:        2
 Source:         https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz
 URL:            https://github.com/mviereck/kaptain
 License:        GPLv2
@@ -67,7 +67,9 @@ mv ./usr/local/bin/kaptain ./%{_bindir}
 # docs
 mkdir -p ./%{_defaultdocdir}
 mv ./usr/local/share/doc/kaptain ./%{_defaultdocdir}
-mv ./usr/local/share/kaptain ./%{_defaultdocdir}/kaptain/examples
+# example grammars
+mkdir -p ./%{_datarootdir}
+mv ./usr/local/share/kaptain .%{_datarootdir}
 # manpage
 mkdir -p ./%{_mandir}/man1
 mv ./usr/local/share/man/man1/kaptain.1 ./%{_mandir}/man1
@@ -79,5 +81,5 @@ rm -r ./usr/local
 %{_bindir}/*
 %doc %{_defaultdocdir}/*
 %doc %{_mandir}/*
-
+%doc %{_datarootdir}/*
 
