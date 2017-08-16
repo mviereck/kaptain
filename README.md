@@ -35,7 +35,7 @@ This repository provides an rpm package for openSUSE. Compiled and packaged on o
 The provided [Dockerfile for kaptain](https://github.com/mviereck/kaptain/raw/master/Dockerfile) is used for an automated built of [x11docker/kaptain](https://hub.docker.com/r/x11docker/kaptain/) on docker hub. Example use: `x11docker --stdout --silent --hostdisplay --gpu --sharedir YOURKAPTNFILE -- x11docker/kaptain YOURKAPTNFILE`
 
 # Compiling from source
-The makefile of kaptain is configured to install everything in `/usr/local`. If you compile yourself, kaptain is installed as `/usr/local/bin/kaptain`. Manpage and documentation are in subfolders of `/usr/local`, too. `man kaptain` may not work then. Using the provided packages, all related files are stored at system locations they belong to. [Download source code of kaptain](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz).
+[Download source code of kaptain](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz).
 
 ## debian
 ```
@@ -44,6 +44,10 @@ export QT_SELECT=qt4
 qmake kaptain.pro
 make
 make install
+mv /usr/local/bin/kaptain /usr/bin
+mv /usr/local/share/doc/kaptain /usr/share/doc
+mv /usr/local/share/kaptain /usr/share/kaptain
+mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
 ```
 ## Ubuntu
 ```
@@ -52,6 +56,10 @@ export QT_SELECT=qt4
 qmake kaptain.pro
 make
 make install
+mv /usr/local/bin/kaptain /usr/bin
+mv /usr/local/share/doc/kaptain /usr/share/doc
+mv /usr/local/share/kaptain /usr/share/kaptain
+mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
 ```
 
 ## fedora
@@ -60,6 +68,10 @@ dnf install qt-devel bison flex
 qmake-qt4 kaptain.pro
 make
 make install
+mv /usr/local/bin/kaptain /usr/bin
+mv /usr/local/share/doc/kaptain /usr/share/doc
+mv /usr/local/share/kaptain /usr/share/kaptain
+mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
 ```
 ## openSUSE
 ```
@@ -68,6 +80,10 @@ export QT_SELECT=qt4
 qmake kaptain.pro
 make
 make install
+mv /usr/local/bin/kaptain /usr/bin
+mv /usr/local/share/doc/kaptain /usr/share/doc/packages
+mv /usr/local/share/kaptain /usr/share/kaptain
+mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
 ```
 # Porting to QT5
 Unfortunately, kaptain is no longer maintained. As it is based on QT4 and not ported to QT5, it already disappears from official repositories. It is a quite useful tool and I am not aware of another one that is able to provide its features. Personally, I am using it as a frontend for [x11docker](https://github.com/mviereck/x11docker).
