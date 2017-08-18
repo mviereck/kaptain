@@ -85,9 +85,16 @@ qmake kaptain.pro
 make
 make install
 mv /usr/local/bin/kaptain /usr/bin
-mv /usr/local/share/doc/kaptain /usr/share/doc/packages
+mv /usr/local/share/doc/kaptain /usr/share/doc
 mv /usr/local/share/kaptain /usr/share/kaptain
 mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
+```
+## removing self-compiled kaptain
+```
+rm /usr/bin/kaptain
+rm -R /usr/share/doc/kaptain
+rm -R /usr/share/kaptain
+rm /usr/share/man/man1/kaptain.1
 ```
 # Porting to QT5
 Unfortunately, kaptain is no longer maintained. As it is based on QT4 and not ported to QT5, it already disappears from official repositories. It is a quite useful tool and I am not aware of another one that is able to provide its features. Personally, I am using it as a frontend for [x11docker](https://github.com/mviereck/x11docker).
