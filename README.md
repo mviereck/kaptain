@@ -65,7 +65,6 @@ mv /usr/local/share/doc/kaptain /usr/share/doc
 mv /usr/local/share/kaptain /usr/share/kaptain
 mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
 ```
-
 ## fedora
 ```
 dnf install qt-devel bison flex
@@ -82,6 +81,17 @@ mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
 zypper install libqt4-devel bison flex
 export QT_SELECT=qt4
 qmake kaptain.pro
+make
+make install
+mv /usr/local/bin/kaptain /usr/bin
+mv /usr/local/share/doc/kaptain /usr/share/doc
+mv /usr/local/share/kaptain /usr/share/kaptain
+mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
+```
+## Arch Linux
+```
+pacman -S qt4 bison flex
+qmake-qt4 kaptain.pro
 make
 make install
 mv /usr/local/bin/kaptain /usr/bin
