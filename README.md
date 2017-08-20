@@ -28,12 +28,12 @@ The provided packages can be installed on Ubuntu 16.04, too. The package provide
 Most likely, the Ubuntu package of kaptain will work on other Ubuntu-based distributions like Linux Mint, too.
 ## fedora, CentOS, RHEL
 This repository provides an rpm package for fedora. Compiled and packaged on fedora 25 with rpmbuild specification [kaptain-0.73.spec](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.spec). 
- - [Download package kaptain for fedora](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_fedora.rpm).
+ - [Download package kaptain for fedora](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-2.x86_64_fedora.rpm).
 
 As directly related, the rpm package provided for fedora will most probably work on CentOS and RHEL, too. Though, this is not tested yet.
 ## openSUSE
 This repository provides an rpm package for openSUSE. Compiled and packaged on openSUSE 42.3 LEAP with rpmbuild specification [kaptain-0.73.spec](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.spec). 
- - [Download package kaptain for openSUSE](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-1.x86_64_opensuse.rpm).
+ - [Download package kaptain for openSUSE](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-2.x86_64_opensuse.rpm).
 
 # Dockerfile and docker image
 The provided [Dockerfile for kaptain](https://github.com/mviereck/kaptain/raw/master/Dockerfile) is used for an automated built of [x11docker/kaptain](https://hub.docker.com/r/x11docker/kaptain/) on docker hub. Example use: `x11docker --stdout --silent --hostdisplay --gpu --sharedir YOURKAPTNFILE -- x11docker/kaptain YOURKAPTNFILE`
