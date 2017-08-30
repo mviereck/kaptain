@@ -14,16 +14,9 @@
 # Example use with x11docker (https://github.com/mviereck/x11docker):
 #   x11docker --stdout --stderr --sharedir YOURKAPTNFILE --hostdisplay --gpu -- x11docker/kaptain YOURKAPTNFILE
 
-FROM debian:jessie
-RUN apt-get  update
-RUN apt-get install -y apt-utils
+FROM debian:jessie-slim
 
-# Language/locale settings
-ENV LANG=en_US.UTF-8
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
-RUN echo "LANG=en_US.UTF-8" > /etc/default/locale
-RUN apt-get install -y locales
-
+RUN apt-get update
 RUN apt-get install -y --no-install-recommends kaptain
 
 ENTRYPOINT /usr/bin/kaptain
