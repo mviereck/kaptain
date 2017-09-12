@@ -19,4 +19,8 @@ FROM debian:jessie-slim
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends kaptain
 
+RUN echo "[QT]\n\
+style=Cleanlooks\n\
+" > /etc/xdg/Trolltech.conf
+
 ENTRYPOINT /usr/bin/kaptain
