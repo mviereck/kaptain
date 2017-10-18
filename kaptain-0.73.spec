@@ -46,7 +46,7 @@ a friendly dialog to the user to set up the command line.
 export INSTALL_ROOT=%{buildroot}
 export QT_SELECT=qt4
 
-%if 0%{?fedora} || 0%{?rhel_version} || 0%{?centos_version} 
+%if 0%{?fedora} || 0%{?rhel_version} || 0%{?centos} 
 qmake-qt4 kaptain.pro
 %else
 #openSUSE
