@@ -26,11 +26,14 @@ The provided packages can be installed on Ubuntu 16.04, too. The package provide
  - [Download package kaptain for Ubuntu](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-1_amd64_ubuntu.deb).
 
 Most likely, the Ubuntu package of kaptain will work on other Ubuntu-based distributions like Linux Mint, too.
-## fedora, CentOS, RHEL
+## fedora
 This repository provides an rpm package for fedora. Compiled and packaged on fedora 25 with rpmbuild specification [kaptain-0.73.spec](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.spec). 
  - [Download package kaptain for fedora](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-2.x86_64_fedora.rpm).
+## CentOS, RHEL
+This repository provides an rpm package for CentOS. Compiled and packaged on CentOS 7 with rpmbuild specification [kaptain-0.73.spec](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.spec). 
+ - [Download package kaptain for CentOS](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-2.x86_64_centos.rpm).
 
-As directly related, the rpm package provided for fedora will most probably work on CentOS and RHEL, too. Though, this is not tested yet.
+As directly related, the rpm package provided for CentOS will most probably work on RHEL, too. Though, this is not tested yet.
 ## openSUSE
 This repository provides an rpm package for openSUSE. Compiled and packaged on openSUSE 42.3 LEAP with rpmbuild specification [kaptain-0.73.spec](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.spec). 
  - [Download package kaptain for openSUSE](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-2.x86_64_opensuse.rpm).
@@ -41,6 +44,17 @@ The provided [Dockerfile for kaptain](https://github.com/mviereck/kaptain/raw/ma
 # Compiling from source
  - [Download source code of kaptain](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz).
 
+## Arch Linux
+```
+pacman -S qt4 bison flex
+qmake-qt4 kaptain.pro
+make
+make install
+mv /usr/local/bin/kaptain /usr/bin
+mv /usr/local/share/doc/kaptain /usr/share/doc
+mv /usr/local/share/kaptain /usr/share/kaptain
+mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
+```
 ## debian
 ```
 apt-get install libqt4-dev bison flex
@@ -76,11 +90,10 @@ mv /usr/local/share/doc/kaptain /usr/share/doc
 mv /usr/local/share/kaptain /usr/share/kaptain
 mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
 ```
-## openSUSE
+## CentOS
 ```
-zypper install libqt4-devel bison flex
-export QT_SELECT=qt4
-qmake kaptain.pro
+yum install qt-devel bison flex
+qmake-qt4 kaptain.pro
 make
 make install
 mv /usr/local/bin/kaptain /usr/bin
@@ -88,10 +101,11 @@ mv /usr/local/share/doc/kaptain /usr/share/doc
 mv /usr/local/share/kaptain /usr/share/kaptain
 mv /usr/local/share/man/man1/kaptain.1 /usr/share/man/man1
 ```
-## Arch Linux
+## openSUSE
 ```
-pacman -S qt4 bison flex
-qmake-qt4 kaptain.pro
+zypper install libqt4-devel bison flex
+export QT_SELECT=qt4
+qmake kaptain.pro
 make
 make install
 mv /usr/local/bin/kaptain /usr/bin
