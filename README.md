@@ -44,7 +44,7 @@ The provided [Dockerfile for kaptain](https://github.com/mviereck/kaptain/raw/ma
 # Compiling from source
  - [Download source code of kaptain](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz).
 
-## Arch Linux
+## Arch Linux, Manjaro
 ```
 pacman -S qt4 bison flex
 qmake-qt4 kaptain.pro
