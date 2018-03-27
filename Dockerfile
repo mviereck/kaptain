@@ -28,5 +28,5 @@ RUN echo $LANG UTF-8 > /etc/locale.gen && \
 style=Cleanlooks\n\
 " > /etc/xdg/Trolltech.conf
 
-ENTRYPOINT /usr/bin/kaptain
+ENTRYPOINT ["/usr/bin/kaptain"]
 ENV DEBIAN_FRONTEND newt
