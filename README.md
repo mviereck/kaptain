@@ -22,7 +22,7 @@ The provided packages can be installed on debian stretch, too. The package provi
  - [Download package kaptain for debian](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-2_amd64_debian.deb).
 ## Ubuntu, Mint and other forks of Ubuntu
 kaptain is available in repositories of Ubuntu 14.04: http://packages.ubuntu.com/trusty/kaptain.
-The provided packages can be installed on Ubuntu 16.04, too. The package provided here is a copy from Ubuntu repository. 
+The provided packages can be installed on Ubuntu 16.04 and 18.04, too. The package provided here is a copy from Ubuntu repository. 
  - [Download package kaptain for Ubuntu](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-1_amd64_ubuntu.deb).
 
 Most likely, the Ubuntu package of kaptain will work on other Ubuntu-based distributions like Linux Mint, too.
