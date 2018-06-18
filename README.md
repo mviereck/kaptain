@@ -27,7 +27,7 @@ The provided packages can be installed on Ubuntu 16.04 and 18.04, too. The packa
 
 Most likely, the Ubuntu package of kaptain will work on other Ubuntu-based distributions like Linux Mint, too.
 ## fedora
-This repository provides an rpm package for fedora. Compiled and packaged on fedora 25 with rpmbuild specification [kaptain-0.73.spec](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.spec). 
+This repository provides an rpm package for fedora. Compiled and packaged on fedora 25 with rpmbuild specification [kaptain-0.73.spec](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.spec). Tested on fedora 28.
  - [Download package kaptain for fedora](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-2.x86_64_fedora.rpm).
 ## CentOS, RHEL
 This repository provides an rpm package for CentOS. Compiled and packaged on CentOS 7 with rpmbuild specification [kaptain-0.73.spec](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.spec). 
