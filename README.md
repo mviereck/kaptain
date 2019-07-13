@@ -8,7 +8,7 @@ A fork from http://kaptain.sourceforge.net/. Honours go to author Zsolt Térek.
 
 [Dokumentation of kaptain](http://kaptain.sourceforge.net/docs/kaptain.html)
 
-This little repo:
+This little repo: 
  - stores a copy of the source code
  - provides some binary packages for installation
  - provides instructions for compilation
