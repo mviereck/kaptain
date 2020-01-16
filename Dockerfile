@@ -12,14 +12,13 @@
 #
 # To use kaptain in this image, provide an X display and share your .kaptn file
 # Example use with x11docker (https://github.com/mviereck/x11docker):
-#   x11docker --stdout --stderr --clipboard --sharedir YOURKAPTNFILE --hostdisplay -- x11docker/kaptain YOURKAPTNFILE
+#   x11docker --hostdisplay --clipboard --share YOURKAPTNFILE -- x11docker/kaptain YOURKAPTNFILE
 
 FROM debian:jessie-slim
-ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get upgrade -y && \
+RUN export DEBIAN_FRONTEND=noninteractive && \
+    apt-get update && apt-get upgrade -y && \
     apt-get install -y --no-install-recommends kaptain && \
-    apt-get install -y --no-install-recommends kmod xz-utils && \
     apt-get autoremove -y && apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     echo "[QT]\n\
@@ -27,4 +26,3 @@ style=Cleanlooks\n\
 " > /etc/xdg/Trolltech.conf
 
 ENTRYPOINT ["/usr/bin/kaptain"]
-ENV DEBIAN_FRONTEND newt
