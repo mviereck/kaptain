@@ -16,16 +16,20 @@ This little repo:
 
 # Packages
 Currently, this repository provides 64-bit packages only.
-## debian
-kaptain is available in repositories for debian jessie: https://packages.debian.org/jessie/kaptain.
-The provided packages can be installed on debian stretch and buster, too. The package provided here is a copy from debian repository. 
- - [Download package kaptain for debian](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-2_amd64_debian.deb).
+## Debian
+### jessie, stretch, buster
+kaptain is available in the repositories for Debian jessie: https://packages.debian.org/jessie/kaptain.
+The provided package can be installed on debian stretch and buster, too. This package provided here is a copy from Debian jessie repository: 
+ - [Download package kaptain for Debian jessie/stretch/buster](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-2_amd64_debian.deb).
+### bullseye/testing
+kaptain depends on Qt4 that is no longer available in Debian bullseye/testing. Instead, I provide a custom build with some statically linked Qt4 libs:
+ - [Download package kaptain for Debian bullseye/testing](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-3-staticqt4_amd64_debian.deb).
 ## Ubuntu, Mint and other forks of Ubuntu
 kaptain is available in repositories of Ubuntu 14.04: http://packages.ubuntu.com/trusty/kaptain.
-The provided packages can be installed on Ubuntu 16.04 and 18.04, too. The package provided here is a copy from Ubuntu repository. 
- - [Download package kaptain for Ubuntu](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-1_amd64_ubuntu.deb).
-
+The provided packages can be installed on Ubuntu 16.04 and 18.04, too. The package provided here is a copy from Ubuntu repository.
 Most likely, the Ubuntu package of kaptain will work on other Ubuntu-based distributions like Linux Mint, too.
+ - [Download package kaptain for Ubuntu](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-1_amd64_ubuntu.deb).
+ - If you get an error about missing Qt dependencies, try the [statical build for Debian bullseye/testing](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-3-staticqt4_amd64_debian.deb).
 ## fedora
 This repository provides an rpm package for fedora. Compiled and packaged on fedora 25 with rpmbuild specification [kaptain-0.73.spec](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.spec). Tested on fedora 28.
  - [Download package kaptain for fedora](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73-2.x86_64_fedora.rpm).
