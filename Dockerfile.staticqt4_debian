@@ -1,0 +1,49 @@
+# Build kaptain with statically linked Qt4 libraries.
+# Generates /kaptain_0.73-3-staticqt4_amd64_debian.deb
+# Allows to install kaptain on systems without Qt4 libraries.
+
+FROM debian:buster
+RUN echo deb-src http://deb.debian.org/debian buster main >> /etc/apt/sources.list && \
+    sed -i "s/main/main contrib non-free/g" /etc/apt/sources.list
+
+# Dependencies
+RUN apt-get update && \
+    apt-get install -y git-core nano wget tar bison flex qt4-qmake && \
+    apt-get build-dep -y qt4-qmake
+
+# Build static libs of Qt4
+RUN git clone https://github.com/qt/qt.git
+WORKDIR /qt
+RUN echo yes | ./configure \
+                 -release -static -opensource \
+                 -qt3support \
+                 -nomake tools -nomake tests -nomake examples \
+                 -no-multimedia -no-audio-backend -no-phonon -no-phonon-backend \ 
+                 -no-svg -no-webkit -no-javascript-jit -no-script -no-scripttools \
+                 -no-declarative -no-declarative-debug -no-openssl -no-cups -no-dbus \
+                 -no-accessibility
+RUN make
+RUN make install
+
+# Build kaptain
+ENV QT_SELECT=qt4
+RUN wget https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz && \
+    tar -xzf kaptain-0.73.tgz && \
+    cp -R /qt/kaptain-0.73/* /qt/
+RUN qmake kaptain.pro && \
+    make
+
+# Generate new .deb package based on Debian jessie kaptain package
+WORKDIR /
+RUN mkdir /deb && \
+    wget http://ftp.debian.org/debian/pool/main/k/kaptain/kaptain_0.73-2_amd64.deb && \
+    dpkg-deb -R kaptain_0.73-2_amd64.deb /deb
+RUN cp /qt/kaptain /deb/usr/bin/kaptain && \
+    sed -i 's%^Maintainer:.*$%Maintainer: Martin Viereck (not a Debian maintainer. www.github.com/mviereck/kaptain)% ; \
+            s%^Installed-Size:.*$%Installed-Size: 15472% ; \
+            s%^Version:.*$%Version: 1:0.73-3% ; \
+            s%^Depends:.*$%Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libpng16-16(>=1.6.28), libstdc++6 (>= 4.9)% ; \
+    ' /deb/DEBIAN/control && \
+    echo " This unofficial build contains statically linked Qt4 libs." >> /deb/DEBIAN/control && \
+    sed -i "s%.*usr/bin/kaptain.*%$(md5sum /deb/usr/bin/kaptain | cut -d' ' -f1) /usr/bin/kaptain%" /deb/DEBIAN/md5sums
+RUN dpkg-deb -b /deb kaptain_0.73-3-staticqt4_amd64_debian.deb
