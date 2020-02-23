@@ -15,6 +15,7 @@ RUN apt-get update && \
 RUN git clone https://github.com/qt/qt.git
 WORKDIR /qt
 RUN echo yes | ./configure \
+                 -prefix /usr \
                  -release -static -opensource \
                  -qt3support \
                  -nomake tools -nomake tests -nomake examples \
@@ -26,24 +27,24 @@ RUN make
 RUN make install
 
 # Build kaptain
-ENV QT_SELECT=qt4
+WORKDIR /
 RUN wget https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.tgz && \
-    tar -xzf kaptain-0.73.tgz && \
-    cp -R /qt/kaptain-0.73/* /qt/
+    tar -xzf kaptain-0.73.tgz
+WORKDIR /kaptain-0.73
+ENV QT_SELECT=qt4
 RUN qmake kaptain.pro && \
     make
 
 # Generate new .deb package based on Debian jessie kaptain package
-WORKDIR /
-RUN mkdir /deb && \
-    wget http://ftp.debian.org/debian/pool/main/k/kaptain/kaptain_0.73-2_amd64.deb && \
-    dpkg-deb -R kaptain_0.73-2_amd64.deb /deb
-RUN cp /qt/kaptain /deb/usr/bin/kaptain && \
+RUN mkdir -p /deb/kaptain
+WORKDIR /deb
+RUN wget http://ftp.debian.org/debian/pool/main/k/kaptain/kaptain_0.73-2_amd64.deb && \
+    dpkg-deb -R kaptain_0.73-2_amd64.deb /deb/kaptain
+RUN cp /kaptain-0.73/kaptain /deb/kaptain/usr/bin/kaptain && \
     sed -i 's%^Maintainer:.*$%Maintainer: Martin Viereck (not a Debian maintainer. www.github.com/mviereck/kaptain)% ; \
             s%^Installed-Size:.*$%Installed-Size: 15472% ; \
             s%^Version:.*$%Version: 1:0.73-3% ; \
             s%^Depends:.*$%Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libpng16-16(>=1.6.28), libstdc++6 (>= 4.9)% ; \
-    ' /deb/DEBIAN/control && \
-    echo " This unofficial build contains statically linked Qt4 libs." >> /deb/DEBIAN/control && \
-    sed -i "s%.*usr/bin/kaptain.*%$(md5sum /deb/usr/bin/kaptain | cut -d' ' -f1) /usr/bin/kaptain%" /deb/DEBIAN/md5sums
-RUN dpkg-deb -b /deb kaptain_0.73-3-staticqt4_amd64_debian.deb
+           ' /deb/kaptain/DEBIAN/control && \
+    echo " This unofficial build contains statically linked Qt4 libs." >> /deb/kaptain/DEBIAN/control
+RUN dpkg-deb -b /deb/kaptain kaptain_0.73-3-staticqt4_amd64_debian.deb
