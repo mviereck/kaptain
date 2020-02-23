@@ -1,5 +1,5 @@
 # Build kaptain with statically linked Qt4 libraries.
-# Generates /kaptain_0.73-3-staticqt4_amd64_debian.deb
+# Generates /deb/kaptain_0.73-3-staticqt4_amd64_debian.deb
 # Allows to install kaptain on systems without Qt4 libraries.
 
 FROM debian:buster
