@@ -18,7 +18,7 @@ RUN echo yes | ./configure \
                  -prefix /usr \
                  -release -static -opensource \
                  -qt3support \
-                 -nomake tools -nomake tests -nomake examples \
+                 -nomake tools -nomake tests -nomake examples -no-libmng \
                  -no-multimedia -no-audio-backend -no-phonon -no-phonon-backend \ 
                  -no-svg -no-webkit -no-javascript-jit -no-script -no-scripttools \
                  -no-declarative -no-declarative-debug -no-openssl -no-cups -no-dbus \
@@ -43,8 +43,8 @@ RUN wget http://ftp.debian.org/debian/pool/main/k/kaptain/kaptain_0.73-2_amd64.d
 RUN cp /kaptain-0.73/kaptain /deb/kaptain/usr/bin/kaptain && \
     sed -i 's%^Maintainer:.*$%Maintainer: Martin Viereck (not a Debian maintainer. www.github.com/mviereck/kaptain)% ; \
             s%^Installed-Size:.*$%Installed-Size: 15472% ; \
-            s%^Version:.*$%Version: 1:0.73-3% ; \
+            s%^Version:.*$%Version: 1:0.73-4% ; \
             s%^Depends:.*$%Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libpng16-16(>=1.6.28), libstdc++6 (>= 4.9)% ; \
            ' /deb/kaptain/DEBIAN/control && \
     echo " This unofficial build contains statically linked Qt4 libs." >> /deb/kaptain/DEBIAN/control
-RUN dpkg-deb -b /deb/kaptain kaptain_0.73-3-staticqt4_amd64_debian.deb
+RUN dpkg-deb -b /deb/kaptain kaptain_0.73-4-staticqt4_amd64_debian.deb

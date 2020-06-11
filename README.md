@@ -29,7 +29,7 @@ kaptain is available in repositories of Ubuntu 14.04: http://packages.ubuntu.com
 The provided packages can be installed on Ubuntu 16.04 and 18.04, too. The package provided here is a copy from Ubuntu repository.
 Most likely, the Ubuntu package of kaptain will work on other Ubuntu-based distributions like Linux Mint, too.
  - [Download package kaptain for Ubuntu](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-1_amd64_ubuntu.deb).
- - If you get an error about missing Qt dependencies, try the [statical build for Debian bullseye/testing](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-3-staticqt4_amd64_debian.deb). 
+ - If you get an error about missing Qt dependencies, try the [statical build for Debian bullseye/testing](https://github.com/mviereck/kaptain/raw/master/kaptain_0.73-4-staticqt4_amd64_debian.deb). 
    Please report back if that causes issues.
 ## fedora
 This repository provides an rpm package for fedora. Compiled and packaged on fedora 25 with rpmbuild specification [kaptain-0.73.spec](https://github.com/mviereck/kaptain/raw/master/kaptain-0.73.spec). Tested on fedora 28.
