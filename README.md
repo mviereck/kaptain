@@ -16,7 +16,8 @@ This little repo:
 
 # Packages
 Currently, this repository provides 64-bit packages only.
-*** Note: *** It becomes increasingly difficult to provide packages for recent distribution releases. 
+
+**Note:** It becomes increasingly difficult to provide packages for recent distribution releases. 
 For this reason I stopped to provide new packages. x11docker does not use kaptain anymore.
 Unless someone (maybe you?) ports `kaptain` to QT5, I fear it will be abandoned.
 
